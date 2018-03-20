@@ -1,4 +1,4 @@
-(defproject camel-snake-kebab "0.4.1-SNAPSHOT"
+(defproject camel-snake-kebab "0.4.1-SNAPSHOT.roc"
   :min-lein-version "2.5.2"
 
   :description "A library for word case conversions."
@@ -7,6 +7,9 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :scm {:name "git"
         :url "https://github.com/qerub/camel-snake-kebab"}
+
+  :repositories {"releases"  {:url "s3p://roclibs/releases" :no-auth true}
+                 "snapshots" {:url "s3p://roclibs/snapshots" :no-auth true}}
 
   :profiles {:dev {:dependencies [[org.clojure/clojure "1.7.0"]
                                   [org.clojure/clojurescript "1.7.228" :scope "provided"]]
